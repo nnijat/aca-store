@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
 </head>
+
 <body>
-     <script src="products.js"></script>    
-    <script src="index.js"></script>   
+    <!-- buttons to interact with the app by searching or viewing cart -->
+    <div id="searchArea">
+        <h1>aca-store</h1>
+        <select id="selectProduct">
+            <option value="default" onchange="selectFood()">--Choose--</option>
+            <option value="food">food</option>
+            <option value="electronics">electronics</option>
+            <option value="sporting">sporting</option>
+        </select>
+        <input id="searchBox" type="text" placeholder="" value="" />
+        <button onclick="searchProducts()" id="searchButton" type="button"><i class="fas fa-search"></i>
+        </button>
+        <button onclick="viewCart()" id="viewCartButton" type="button">View Cart <i
+                class="fas fa-shopping-cart"></i></button>
+        <!-- array generated from the search function appears here -->
+        <div>
+            <ul id="searchResults"></ul>
+        </div>
+        <!-- list of all products in the products.js array -->
+    </div>
+    <div id="productDisplay">
+        <h3>Products</h3>
+        <ul id="listProducts">
+
+        </ul>
+    </div>
+    <!-- detailed view of an individual product -->
+    <div id="productDetail">
+        <h3>Details</h3>
+
+    </div>
+    <div id="shoppingCart">
+        <h3>Shopping Cart</h3>
+    </div>
+    <script src="products.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
